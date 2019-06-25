@@ -47,7 +47,7 @@ body {
   z-index: 10;
   background: #114A9B; }
   .timeline__header--logo {
-    height: 100vh;
+    height: 75vh;
     background-image: url("../img/logo_edgefest_2019/logo-Edgefest-2019-web-transparent-SVG.svg");
     background-position: center center;
     background-repeat: no-repeat;
