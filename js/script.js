@@ -53,6 +53,39 @@
         });
       });
     };
+
+    // hack navigation carroussel redirection pages suivantes / précédentes
+    var carouselPrev = $(".carousel-item.active").prev();
+    if(carouselPrev.hasClass('carousel-item'))
+    {
+      $(".carousel-control-prev").on("click", function(e) {
+          e.preventDefault();
+          var href = $(".carousel-item.active").prev().find('a').attr('href');
+          if(href && href != "#") {
+              window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/' + href;
+          }
+      });
+    }
+    else
+    {
+      $(".carousel-control-prev").hide();
+    }
+
+    var carouselNext = $(".carousel-item.active").next();
+    if(carouselNext.hasClass('carousel-item'))
+    {
+      $(".carousel-control-next").on("click", function(e) {
+          e.preventDefault();
+          var href = $(".carousel-item.active").next().find('a').attr('href');
+          if(href && href != "#") {
+              window.location.href = window.location.href.substr(0, window.location.href.lastIndexOf("/")) + '/' + href;
+          }
+      });
+    }
+    else
+    {
+      $(".carousel-control-next").hide();
+    }
   })(jQuery);
   
   $("#timeline-1").timeline();
