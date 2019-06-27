@@ -52,7 +52,8 @@ body {
     background-image: url("../img/logo_edgefest_2019/logo-Edgefest-2019-web-transparent-SVG.svg");
     background-position: center center;
     background-repeat: no-repeat;
-    z-index: 11; }
+    z-index: 11;
+    background-size: 100% 90%; }
   .timeline__header h1 {
     font-size: 40px;
     color: #EE7330;
@@ -85,7 +86,9 @@ body {
       text-align: center;
       padding-right: 0;
       padding-left: 0;
-      margin: auto; } }
+      margin: auto; }
+    .timeline__header .h1-date::before {
+      display: none; } }
 
 .timeline {
   display: flex;
