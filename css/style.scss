@@ -80,6 +80,7 @@ body {
         background-position: center center;
         background-repeat: no-repeat;
         z-index: 11;
+        background-size: 100% 90%;
     }
     h1 {
         font-size: 40px;
@@ -118,6 +119,9 @@ body {
             padding-right: 0;
             padding-left: 0;
             margin: auto;
+        }
+        .h1-date::before {
+            display: none;
         }
     }
 
