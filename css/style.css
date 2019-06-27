@@ -83,7 +83,9 @@ body {
       width: 90%;
       display: block;
       text-align: center;
-      padding-left: 0; } }
+      padding-right: 0;
+      padding-left: 0;
+      margin: auto; } }
 
 .timeline {
   display: flex;
