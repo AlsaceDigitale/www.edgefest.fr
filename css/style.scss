@@ -5,6 +5,8 @@ $orange: #EE7330;
 $jaune: #FBBA00;
 $rouge: #D3033B;
 
+$fond_pastille: #91b1d3;
+
 // Responsive
 @mixin responsive() {
     @media only screen and (max-width: 767px) {
@@ -71,13 +73,52 @@ body {
     z-index: 10;
     // overflow-y: hidden;
     background: $bleu_fonce;
+    padding: 50px 0;
     &--logo {
-        height: 75vh;
+        height: 50vh;
         background-image: url('../img/logo_edgefest_2019/logo-Edgefest-2019-web-transparent-SVG.svg');
         background-position: center center;
         background-repeat: no-repeat;
         z-index: 11;
     }
+    h1 {
+        font-size: 40px;
+        color: $orange;
+        padding-top: 50px;
+        font-family: "VT323";
+        width: 50%;
+        display: inline-block;
+    }
+    .h1-date {
+        font-size: 40px;
+        color: $jaune;
+        padding-top: 35px;
+        font-family: "VT323";
+        width: 40%;
+        display: inline-block;
+        text-align: left;
+        position: relative;
+        padding-left: 30px;
+        &::before {
+            display: block;
+            content: '/';
+            font-size: 80px;
+            position: absolute;
+            left: -35px;
+            top: 34px;
+            font-family: "VT323";
+        }
+    }
+
+    @media only screen and (max-width: 1480px) {
+        h1, .h1-date {
+            width: 90%;
+            display: block;
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+
 }
 
 $timeline-width:700px;
@@ -106,19 +147,19 @@ $timeline-container-width:100%;
         font-weight: bolder;
         position: -webkit-sticky;
         position: sticky;
-        top: 0;
+        top: 15px;
         z-index: 2;
         opacity: 1;
         // style pastille
-        color: $rouge;
-        background: $bleu_fonce;
+        color: $bleu_fonce;
+        background: $fond_pastille;
         text-align: center;
         width: 90px;
         height: 90px;
         margin-top:50px; margin-bottom:0px;
         margin-left:auto;
         margin-right:auto;
-        padding-top: 27px; 
+        padding-top: 31px; 
         display: block;
         transition: all .5s ease-in-out;
         &:hover {
@@ -191,7 +232,7 @@ $timeline-container-width:100%;
             opacity: 1;
             }
             .timeline__content-title {
-                margin: -50px 0 20px 0;
+                margin: -20px 0 20px 0;
                 // margin: -10px 0 0 0;
             }
         }
@@ -220,9 +261,9 @@ $timeline-container-width:100%;
         &-title {
           // border: 2px solid #FFF;
           font-weight: normal;
-          font-size: 2.5em;
+          font-size: 1.9em;
           // margin: -50px 0 20px 0;
-          margin: -50px 0 0 0;
+          margin: -20px 0 0 0;
           transition: .4s;
           transform: translate(0,50%);
           box-sizing: border-box;
@@ -260,10 +301,15 @@ $timeline-container-width:100%;
 // EVENTS 
 // 
 
+.eventbox {
+    padding: 30px 0;
+}
+
 .event__header {
     text-align: center;
     z-index: 10;
     overflow: hidden;
+    padding: 30px 0;
     &--img {
         height: 33vh;
         background-image: attr(data-image-src);
@@ -314,14 +360,16 @@ $timeline-container-width:100%;
 
 footer {
     min-height: 0;
-    padding: 1em 0;
+    padding: 40px 0;
     text-align: center;
     background-color: #282828;
-    background-image: url(/img/footer.png);
     background-size: 100% auto;
     background-position: top center;
     color: white; }
-    footer ul.row > li {
+    footer ul.row {
+        display: block;
+        padding-bottom: 10px;}
+        footer ul.row > li {
         text-align: left;
         padding: 0 2em;
         vertical-align: top; }
@@ -344,6 +392,15 @@ footer {
         color: white;
         font-size: 16px; }
 
+section.sponsors {
+    padding: 30px 0;
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
 ul.sponsors {
     text-align: center; }
     ul.sponsors li {
