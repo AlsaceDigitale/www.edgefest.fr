@@ -153,7 +153,7 @@ body {
       position: absolute;
       color: #fbba00;
       font-size: 1.2em;
-      border-left: 3px solid rgba(211, 3, 59, 0.35);
+      border-left: 3px solid rgba(255, 255, 255, 0.5);
       top: 70%;
       transition: all 1s;
       transform: translateY(-50%);
@@ -201,6 +201,7 @@ body {
     font-weight: normal;
     font-size: 1.7em;
     margin: -50px 0 20px 0;
+    word-wrap: break word;
     transition: all 1s;
     box-sizing: border-box;
     color: #fff; }
