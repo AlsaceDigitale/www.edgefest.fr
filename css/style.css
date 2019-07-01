@@ -159,13 +159,13 @@ body {
       transform: translateY(-50%);
       padding-left: 15px;
       opacity: 0;
-      right: calc(-100% - 59px); }
+      right: calc(-100% - 43px); }
     .timeline-item:nth-child(even) {
       align-self: flex-end; }
       .timeline-item:nth-child(even):before {
         right: auto;
         text-align: right;
-        left: calc(-100% - 58px);
+        left: calc(-100% - 41px);
         padding-left: 0;
         border-left: none;
         border-right: 3px solid rgba(255, 255, 255, 0.5);
