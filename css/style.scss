@@ -214,6 +214,11 @@ $timeline-container-width:100%;
             padding-left: 15px;
             opacity: 0;
             right: calc(-100% - 43px);
+            @include responsive() {
+                width: 100%!important;
+                float: none!important;
+                top: -33px!important;
+            }
         }
         &:nth-child(even) {
             align-self: flex-end;
@@ -226,6 +231,11 @@ $timeline-container-width:100%;
                 border-left: none;
                 border-right: 3px solid rgba(#fff, .5);
                 padding-right: 15px;
+                @include responsive() {
+                    width: 100%!important;
+                    float: none!important;
+                    top: -33px!important;
+                }
             }
         }
         &--active {

@@ -160,6 +160,11 @@ body {
       padding-left: 15px;
       opacity: 0;
       right: calc(-100% - 43px); }
+      @media only screen and (max-width: 767px) {
+        .timeline-item:before {
+          width: 100% !important;
+          float: none !important;
+          top: -33px !important; } }
     .timeline-item:nth-child(even) {
       align-self: flex-end; }
       .timeline-item:nth-child(even):before {
@@ -170,6 +175,11 @@ body {
         border-left: none;
         border-right: 3px solid rgba(255, 255, 255, 0.5);
         padding-right: 15px; }
+        @media only screen and (max-width: 767px) {
+          .timeline-item:nth-child(even):before {
+            width: 100% !important;
+            float: none !important;
+            top: -33px !important; } }
     .timeline-item--active {
       opacity: 1;
       transform: translate(0, 20%);
