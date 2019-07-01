@@ -45,13 +45,50 @@ body {
 .timeline__header {
   text-align: center;
   z-index: 10;
-  background: #114A9B; }
+  background: #114A9B;
+  padding: 50px 0; }
   .timeline__header--logo {
-    height: 75vh;
+    height: 50vh;
     background-image: url("../img/logo_edgefest_2019/logo-Edgefest-2019-web-transparent-SVG.svg");
     background-position: center center;
     background-repeat: no-repeat;
-    z-index: 11; }
+    z-index: 11;
+    background-size: 100% 90%; }
+  .timeline__header h1 {
+    font-size: 40px;
+    color: #EE7330;
+    padding-top: 50px;
+    font-family: "VT323";
+    width: 50%;
+    display: inline-block; }
+  .timeline__header .h1-date {
+    font-size: 40px;
+    color: #FBBA00;
+    padding-top: 35px;
+    font-family: "VT323";
+    width: 40%;
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    padding-left: 30px; }
+    .timeline__header .h1-date::before {
+      display: block;
+      content: '/';
+      font-size: 80px;
+      position: absolute;
+      left: -35px;
+      top: 34px;
+      font-family: "VT323"; }
+  @media only screen and (max-width: 1480px) {
+    .timeline__header h1, .timeline__header .h1-date {
+      width: 90%;
+      display: block;
+      text-align: center;
+      padding-right: 0;
+      padding-left: 0;
+      margin: auto; }
+    .timeline__header .h1-date::before {
+      display: none; } }
 
 .timeline {
   display: flex;
@@ -72,11 +109,11 @@ body {
     font-weight: bolder;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 15px;
     z-index: 2;
     opacity: 1;
-    color: #D3033B;
-    background: #114A9B;
+    color: #114A9B;
+    background: #91b1d3;
     text-align: center;
     width: 90px;
     height: 90px;
@@ -84,7 +121,7 @@ body {
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 27px;
+    padding-top: 31px;
     display: block;
     transition: all .5s ease-in-out; }
     .timeline span:hover {
@@ -142,7 +179,7 @@ body {
         transition: .3s all .2s;
         opacity: 1; }
       .timeline-item--active .timeline__content-title {
-        margin: -50px 0 20px 0; }
+        margin: -20px 0 20px 0; }
     @media only screen and (max-width: 767px) {
       .timeline-item {
         align-self: baseline !important;
@@ -162,8 +199,8 @@ body {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4); }
   .timeline__content-title {
     font-weight: normal;
-    font-size: 2.5em;
-    margin: -50px 0 0 0;
+    font-size: 1.9em;
+    margin: -20px 0 0 0;
     transition: .4s;
     transform: translate(0, 50%);
     box-sizing: border-box;
@@ -191,10 +228,14 @@ body {
       background: rgba(17, 74, 155, 0.8);
       content: ""; }
 
+.eventbox {
+  padding: 30px 0; }
+
 .event__header {
   text-align: center;
   z-index: 10;
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 30px 0; }
   .event__header--img {
     height: 33vh;
     background-image: attr(data-image-src);
@@ -236,13 +277,16 @@ body {
 
 footer {
   min-height: 0;
-  padding: 1em 0;
+  padding: 40px 0;
   text-align: center;
   background-color: #282828;
-  background-image: url(/img/footer.png);
   background-size: 100% auto;
   background-position: top center;
   color: white; }
+
+footer ul.row {
+  display: block;
+  padding-bottom: 10px; }
 
 footer ul.row > li {
   text-align: left;
@@ -269,6 +313,14 @@ footer ul.row > li > ul > li a {
 .copyright, .copyright a {
   color: white;
   font-size: 16px; }
+
+section.sponsors {
+  padding: 30px 0; }
+  section.sponsors h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold; }
 
 ul.sponsors {
   text-align: center; }
